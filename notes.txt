@@ -3,4 +3,4 @@ TO RUN KUBERNETS ON GIT BASH
 2 - 
 
 241 - pass the cookies
-    
+    => property request => 
