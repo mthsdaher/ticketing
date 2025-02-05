@@ -12,13 +12,15 @@ export default () => {
     body: {
       email,
       password
-    }
+    },
+    onSuccess: () => Router.push('/')//redirect the user to the root route 
   });
 
   const onSubmit = async (event) => {
     event.preventDefault(); //prevent the browser from attempting to automatically submit the form
 
     Router.push('/');//redirect the user to the root route
+    
     doRequest(); 
     /*
     => try catch block to show the error using response build-in method, BUT NOW WE USE useRequest hook to make a request to the server instead /\
@@ -48,4 +50,18 @@ export default () => {
 
         <div className="form-group">
           <label>Password</label>
-         
+          <input
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            type="password"
+            className="form-control"
+          />
+        </div>
+
+        {errors}  //display the error message
+
+        <button className="btn btn-primary">Sign up</button>
+      </form>
+    );
+  };
+};

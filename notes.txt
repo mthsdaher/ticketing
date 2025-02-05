@@ -1,1 +1,6 @@
-aula 179 - secrets em kubernets
+TO RUN KUBERNETS ON GIT BASH
+1 - skaffold run
+2 - 
+
+241 - pass the cookies
+    

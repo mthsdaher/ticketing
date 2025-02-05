@@ -4,17 +4,30 @@ metadata:
   name: ingress-service
   annotations:
     nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/secure-backends: "true"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
 spec:
   ingressClassName: nginx
+  tls:
+    - hosts:
+        - ticketing.dev
+      secretName: ticketing-dev-tls
   rules:
     - host: ticketing.dev
       http:
         paths:
           - path: /api/users/?(.*)
+            pathType: Prefix
             backend:
-              servicename: auth-srv
-              servicePort: 3000
+              service:
+                name: auth-srv 
+                port:
+                  number: 3000 
           - path: /?(.*)
+            pathType: Prefix
             backend:
-              servicename: client-srv
-              servicePort: 3000
+              service:
+                name: client-srv 
+                port:
+                  number: 3000
