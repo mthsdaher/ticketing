@@ -1,0 +1,17 @@
+TO RUN KUBERNETS ON GIT BASH
+1 - skaffold run
+2 - 
+
+241 - pass the cookies
+    => property request => req.headeres to pass the cookies through the headeres
+
+242 - buildClient function:
+    => create folder API, create the function buildClient, and import on index.js
+
+243 - landing page 
+
+244 - signin
+
+245 - _app.js headere
+
+246 - 
