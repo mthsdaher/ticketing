@@ -3,6 +3,7 @@
 > Hands‑on e‑commerce microservices app powered by Node.js, Express, React/Next.js, Docker, and Kubernetes.
 
 ## Table of Contents
+
 - [Course Summary](#course-summary)
 - [Technologies](#technologies)
 - [Prerequisites](#prerequisites)
@@ -16,39 +17,43 @@
 - [License](#license)
 
 ## Course Summary
+
 A deep dive into microservice architecture, covering:
-- Service design & data patterns  
-- Event‑based communication via a custom event bus  
-- SSR React app with Next.js integration  
-- Docker containerization & Kubernetes deployment  
-- GitHub Actions for CI/CD & automated testing  
+
+- Service design & data patterns
+- Event‑based communication via a custom event bus
+- SSR React app with Next.js integration
+- Docker containerization & Kubernetes deployment
+- GitHub Actions for CI/CD & automated testing
 
 ## Technologies
-- **Backend**: Node.js, Express, TypeScript  
-- **Frontend**: React, Next.js, Hooks  
-- **Databases**: MongoDB, Redis  
-- **Containerization**: Docker, Docker Compose  
-- **Orchestration**: Kubernetes, Ingress‑Nginx  
-- **Testing**: Jest, Supertest  
-- **CI/CD**: GitHub Actions  
+
+- **Backend**: Node.js, Express, TypeScript
+- **Frontend**: React, Next.js, Hooks
+- **Databases**: MongoDB, Redis
+- **Containerization**: Docker, Docker Compose
+- **Orchestration**: Kubernetes, Ingress‑Nginx
+- **Testing**: Jest, Supertest
+- **CI/CD**: GitHub Actions
 
 ## Prerequisites
-- Node.js ≥14.x & npm  
-- Docker Desktop  
-- kubectl CLI & access to a Kubernetes cluster (minikube or cloud)  
-- Git  
+
+- Node.js ≥14.x & npm
+- Docker Desktop
+- kubectl CLI & access to a Kubernetes cluster (minikube or cloud)
+- Git
 
 ## Project Structure
 
 / ├─ client/ # Next.js React frontend ├─ services/ │ ├─ auth-service/ # Authentication microservice │ ├─ billing-service/ # Billing & payments │ └─ ... # Other domain services ├─ k8s/ │ ├─ dev/ # Dev manifests │ └─ prod/ # Prod manifests └─ .github/workflows/ # CI/CD pipelines
 
-
 ## Getting Started
 
 ### 1. Clone the repo
+
 ```bash
-git clone https://github.com/<your‑username>/microservices-node-react.git
-cd microservices-node-react
+git clone https://github.com/mthsdaher/ticketing
+cd ticketing
 
 2. Install dependencies
 
@@ -106,3 +111,4 @@ Features
     Secure JWT‑based authentication
 
     Scalable Docker & Kubernetes setup
+```
