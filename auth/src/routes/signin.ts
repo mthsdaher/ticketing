@@ -1,11 +1,10 @@
 import express, { Request, Response } from 'express';
-import { body } from 'express-validator'; //method as a middleware to validate the request
+import { body } from 'express-validator';
 import jwt from 'jsonwebtoken';
+import { validateRequest, BadRequestError } from '@rallycoding/common';
 
 import { Password } from '../services/password';
 import { User } from '../models/user';
-import { validateRequest } from '../middlewares/validate-request';
-import { BadRequestError } from '../errors/bad-request-error';
 
 const router = express.Router();
 
@@ -43,7 +42,7 @@ router.post(
         id: existingUser.id,
         email: existingUser.email
       },
-      process.env.JWT_KEY! //not worry ts, it's validated
+      process.env.JWT_KEY!
     );
 
     // Store it on session object

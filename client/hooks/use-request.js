@@ -1,24 +1,23 @@
-import axios from "axios";
-import { useState } from "react";
+import axios from 'axios';
+import { useState } from 'react';
 
-export default ({ url, method, body, onSuccess }) => {//destructure the url, method, and body from the props
-  const [errors, setErrors] = useState(null);//initialize the error message to null
+export default ({ url, method, body, onSuccess }) => {
+  const [errors, setErrors] = useState(null);
 
-  const doRequest = async () => {
+  const doRequest = async (props = {}) => {
     try {
-      setErrors(null);//clear the error message
-      const response = await axios[method](url, body);//make a request to the server
-      return response.data;
+      setErrors(null);
+      const response = await axios[method](url, { ...body, ...props });
 
       if (onSuccess) {
-        onSuccess(response.data);//redirect the user to the root
+        onSuccess(response.data);
       }
 
       return response.data;
-    } catch (err){
-      setErrors(//set the error message
+    } catch (err) {
+      setErrors(
         <div className="alert alert-danger">
-          <h4>Oooops...</h4>
+          <h4>Ooops....</h4>
           <ul className="my-0">
             {err.response.data.errors.map((err) => (
               <li key={err.message}>{err.message}</li>
@@ -29,5 +28,5 @@ export default ({ url, method, body, onSuccess }) => {//destructure the url, met
     }
   };
 
-  return { doRequest, errors };//return the function and the error message
+  return { doRequest, errors };
 };
