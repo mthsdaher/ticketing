@@ -5,10 +5,15 @@
   "scripts": {
     "dev": "next"
   },
+<<<<<<< HEAD
+=======
+  "keywords": [],
+>>>>>>> 58553996d4a89ee01462b41c25bc7463cc6e64e7
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+<<<<<<< HEAD
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
     "next": "^14.2.13",
@@ -16,5 +21,12 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-stripe-checkout": "^2.6.3"
+=======
+    "axios": "^1.7.9",
+    "bootstrap": "^5.3.3",
+    "next": "^15.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+>>>>>>> 58553996d4a89ee01462b41c25bc7463cc6e64e7
   }
 }

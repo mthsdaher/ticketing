@@ -1,9 +1,16 @@
 import express, { Request, Response } from 'express';
 import { body } from 'express-validator';
 import jwt from 'jsonwebtoken';
+<<<<<<< HEAD
 import { validateRequest, BadRequestError } from '@rallycoding/common';
 
 import { User } from '../models/user';
+=======
+
+import { validateRequest } from '../middlewares/validate-request';
+import { User } from '../models/user';
+import { BadRequestError } from '../errors/bad-request-error';
+>>>>>>> 58553996d4a89ee01462b41c25bc7463cc6e64e7
 
 const router = express.Router();
 

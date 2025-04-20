@@ -7,12 +7,17 @@ build:
   local:
     push: false
   artifacts:
+<<<<<<< HEAD
     - image: rallycoding/auth
+=======
+    - image: mthsdaher/auth
+>>>>>>> 58553996d4a89ee01462b41c25bc7463cc6e64e7
       context: auth
       docker:
         dockerfile: Dockerfile
       sync:
         manual:
+<<<<<<< HEAD
           - src: "src/**/*.ts"
             dest: .
     - image: rallycoding/ticketing-client
@@ -53,5 +58,7 @@ build:
         dockerfile: Dockerfile
       sync:
         manual:
+=======
+>>>>>>> 58553996d4a89ee01462b41c25bc7463cc6e64e7
           - src: 'src/**/*.ts'
             dest: .

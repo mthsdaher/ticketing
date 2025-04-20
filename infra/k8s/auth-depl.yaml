@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
         - name: auth
+<<<<<<< HEAD
           image: rallycoding/auth
           env:
             - name: MONGO_URI
@@ -22,6 +23,14 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: jwt-secret
+=======
+          image: mthsdaher/auth
+          env:
+            - name: JWT_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: jwt-secret 
+>>>>>>> 58553996d4a89ee01462b41c25bc7463cc6e64e7
                   key: JWT_KEY
 ---
 apiVersion: v1

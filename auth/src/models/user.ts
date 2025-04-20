@@ -33,6 +33,11 @@ const userSchema = new mongoose.Schema(
     }
   },
   {
+<<<<<<< HEAD
+=======
+    //doc = the mongoose document which is being converted
+    //ret = the plain object representation which has been converted
+>>>>>>> 58553996d4a89ee01462b41c25bc7463cc6e64e7
     toJSON: {
       transform(doc, ret) {
         ret.id = ret._id;

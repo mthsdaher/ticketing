@@ -12,7 +12,11 @@ beforeAll(async () => {
   process.env.JWT_KEY = "asdfasdf";
   process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
+<<<<<<< HEAD
   mongo = await MongoMemoryServer.create();
+=======
+  const mongo = await MongoMemoryServer.create();
+>>>>>>> 58553996d4a89ee01462b41c25bc7463cc6e64e7
   const mongoUri = mongo.getUri();
 
   await mongoose.connect(mongoUri, {});
